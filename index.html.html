@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Small Shop Order</title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+label {
+		font-size:16px;
+}
+#total {
+		font-size:24px;
+}
+input {
+	font-size: 18px;
+}
+.header {
+		text-align:center;
+		padding: 20px;
+}
+</style>
+
+</head>
+<header>
+<h2>Small Shop Order</h2>
+</header>
+<nav>
+
+</nav>
+<column>
+<form>
+<label>Chips: </label>
+<input type="number" id="chips" value="0" min="0" max="20" onclick="buy()" />
+<label>Soda: </label>
+<input type="number" id="soda" value="0" min="0" max="20" onclick="buy()" />
+<label>Sauce: </label>
+<input type="number" id="sauce" value="0" min="0" max="50" onclick="buy()" />
+<label>Sausage: </label>
+<input type="number" id="sausage" value="0" min="0" max="50" onclick="buy()" />
+<div id="total">Total Ksh: 0</div>
+<button onclick="purchase()">Buy</button>
+</form>
+</column>
+
+<footer>
+Call us on: 07xx xxx xxx
+</footer>
+
+<script>
+
+
+function buy() {
+a = document.getElementById("chips").value * 100;
+b = document.getElementById("soda").value * 50;
+c = document.getElementById("sauce").value * 5;
+d = document.getElementById("sausage").value * 30;
+x = a + b + c + d;
+	
+document.getElementById("total").innerHTML = "Total Ksh: " + x;
+}
+
+function purchase(){
+	buy(x);
+window.alert("Your total is: " + x);	
+	}
+</script>
+<body>
+</body>
+</html>
